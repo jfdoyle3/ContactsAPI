@@ -10,9 +10,9 @@ namespace ContactsAPI.Controllers
     [Route("api/[controller]")]
     public class ContactsController : Controller
     {
-        private readonly ContactsAPIDbContext dbContext;
+        private readonly ContactsApiDbContext dbContext;
 
-        public ContactsController(ContactsAPIDbContext dbContext)
+        public ContactsController(ContactsApiDbContext dbContext)
         {
             this.dbContext = dbContext;
         }

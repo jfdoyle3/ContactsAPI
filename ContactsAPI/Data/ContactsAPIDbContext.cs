@@ -1,11 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ContactsAPI.Models;
 
-namespace ContactsAPI.Data
+namespace ContactsApi.Data
 {
-    public class ContactsAPIDbContext : DbContext
+    public class ContactsApiDbContext : DbContext
     {
-        public ContactsAPIDbContext(DbContextOptions options) : base(options) 
+        public ContactsApiDbContext(DbContextOptions options) : base(options) 
         { 
         }
 
