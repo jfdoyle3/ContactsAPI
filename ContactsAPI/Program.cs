@@ -1,4 +1,4 @@
-using ContactsAPI.Data;
+
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,7 +12,7 @@ builder.Services.AddSwaggerGen();
 
 // builder.Services.AddDbContext<ContactsApiDbContext>(options => options.UseInMemoryDatabase("ContactsDb"));
 //  "ContactsApiConnectionString": "Server=AMUZEMENT;Database=ContactsDb;Trusted_Connection=true"
-builder.Services.AddDbContext<ContactsApiDbContext>(options => 
+builder.Services.AddDbContext<ContactsApi.Data.ContactsApiDbContext>(options => 
 options.UseSqlServer(builder.Configuration.GetConnectionString("ContactsApiConnectionString")));
 
 var app = builder.Build();
