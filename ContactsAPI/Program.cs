@@ -10,10 +10,14 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// builder.Services.AddDbContext<ContactsApiDbContext>(options => options.UseInMemoryDatabase("ContactsDb"));
+
+// SQL In Memroy Database
+builder.Services.AddDbContext<ContactsApiDbContext>(options => options.UseInMemoryDatabase("ContactsDb"));
+
+// SQL Database
 //  "ContactsApiConnectionString": "Server=AMUZEMENT;Database=ContactsDb;Trusted_Connection=true"
-builder.Services.AddDbContext<ContactsApi.Data.ContactsApiDbContext>(options => 
-options.UseSqlServer(builder.Configuration.GetConnectionString("ContactsApiConnectionString")));
+//builder.Services.AddDbContext<ContactsApi.Data.ContactsApiDbContext>(options => 
+// options.UseSqlServer(builder.Configuration.GetConnectionString("ContactsApiConnectionString")));
 
 var app = builder.Build();
 
