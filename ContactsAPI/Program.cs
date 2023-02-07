@@ -1,4 +1,3 @@
-
 using ContactsApi.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,7 +16,7 @@ builder.Services.AddSwaggerGen();
 
 // SQL Database
 //  Server=localhost\SQLEXPRESS01;Database=master;Trusted_Connection=True;
-builder.Services.AddDbContext<ContactsApi.Data.ContactsApiDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("ContactsApiConnectionString")));
+builder.Services.AddDbContext<ContactsApiDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("ContactsApiConnectionString")));
 
 var app = builder.Build();
 
